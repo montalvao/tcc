@@ -1,0 +1,9 @@
+# Introdução
+
+Na definição de Noergaard [@bookESA, p. 5], "um sistema embarcado é um sistema computacional aplicado, a ser distinguido de outros tipos de sistemas computacionais como computadores pessoais (PC) ou supercomputadores". Prossegue: "sistemas embarcados são mais limitados em funcionalidades de hardware e/ou software que um computador pessoal". E, ainda: "a maioria dos sistemas embarcados é primariamente projetada para uma função específica. Porém, vemos agora dispositivos como [..] celulares híbridos, sistemas embarcados projetados para poderem desempenhar uma variedade de funções primárias". Pode-se, portanto, definir sistema embarcado em oposição a um sistema de propósito geral, embora vários deles sejam bastante versáteis.
+
+Limitações de custo, consumo elétrico e tamanho conferem aos embarcados topologias únicas, mais ou menos complexas segundo sua utilidade. Tal característica de hardware é acompanhada de uma arquitetura de software também única, esta normalmente mais simples que a de um PC. E um software personalizado oferece desafios a quem se propõe a projetá-lo e mantê-lo, como o reaproveitamento de módulos já compilados, ou o gerenciamento e testes de integração.
+
+A falta de padronização no "mundo embarcado" foi abordada por Likely e Boyer [@paperSymphonyOfFlavors] em 2008, quando propuseram a adoção de uma estrutura de dados para descrição de hardware separada do Kernel: a _Device Tree_. Este mesmo recurso seria, posteriormente, adotado no Linux também para a arquitetura ARM, popular em sistemas embarcados.
+
+O objetivo deste trabalho é apresentar a _Device Tree_ ao projetista de sistemas baseados em ARM, oferecendo-lhe um breve histórico, a forma como está integrada ao Linux, e sua adoção na placa de desenvolvimento _BeagleBone Black_. Ao final, o experimento demonstra uma aplicação prática.

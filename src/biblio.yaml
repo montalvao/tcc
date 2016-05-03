@@ -1,0 +1,494 @@
+---
+references:
+
+# TODO:
+# Utilizar o site https://www.citethisforme.com/
+
+# Controlador do LCD
+# filename: HD44780.pdf
+- id: manualLCDController
+  type: report
+  title: "HITACHI HD44780U Dot Matrix Liquid Crystal Display Controller/Driver"
+  URL: https://www.sparkfun.com/datasheets/LCD/HD44780.pdf
+  issued: 1999
+
+# System Reference Manual (SRM) da bookExploringBB
+# filename: e14 BBB_SRM_rev 0.9.pdf
+- id: manualBBBSRM
+  type: book
+  title: "element14 BeagleBone Black System Reference Manual"
+  edition: 0.9
+  issued: 2014
+
+- id: bookESA
+  type: book
+  title: "Embedded Systems Architecture: A Comprehensive Guide for Engineers and Programmers"
+  edition: 1
+  author:
+  - family: "Noergaard"
+    given: "T."
+  publisher: "Newnes"
+  publisher-place: "Burlington, MA"
+  issued: 2005
+  ISBN: 9780750677929
+
+- id: bookLDD
+  type: book
+  title: "Linux Device Drivers"
+  edition: 3
+  author:
+  - family: "Corbet"
+    given: "J."
+  - family: "Rubini"
+    given: "A."
+  - family: "Kroah-Hartman"
+    given: "G."
+  publisher: "O'Reilly Media"
+  issued: 2005
+  ISBN: 9780596005900
+
+# Datasheet do PCF8574
+- id: manualPCF
+  type: report
+  title: "PCF8574;PCF8574A product data sheet"
+  edition: 5
+  issued:
+  - year: 2013
+
+# Biblioteca para controlar LCDs, de onde tirei o script bash
+# Implementação em: http://elinux.org/BeagleBone/I2CLCDDemo
+- id: urlPyLCD
+  type: webpage
+  title: "PyLCD : A library for controlling HD44780 LCDs over I2C expanders"
+  URL: https://github.com/thorrak/PyLCD
+
+# Documento de binding do PCF Driver
+- id: docPCFDriverBinding
+  type: webpage
+  title: "PCF857x-compatible I/O expanders"
+  URL: https://www.kernel.org/doc/Documentation/devicetree/bindings/gpio/gpio-pcf857x.txt
+
+# Blog do Sérgio Prado
+- id: urlSergioDT2
+  type: webpage
+  title: "Linux e o suporte à device tree – Parte 1"
+  author:
+  - family: Prado
+    given: S.
+  URL: https://sergioprado.org/linux-e-o-suporte-a-device-tree-parte-1/
+
+# Blog do Sérgio Prado
+- id: urlSergioDT2
+  type: webpage
+  title: "Linux e o suporte à device tree – Parte 2"
+  author:
+  - family: Prado
+    given: S.
+  URL: https://sergioprado.org/linux-e-o-suporte-a-device-tree-parte-2/
+
+# Guia para desenvolvimento de drivers de GPIO
+- id: docGPIODriver
+  type: webpage
+  title: "GPIO Descriptor Driver Interface"
+  URL: https://www.kernel.org/doc/Documentation/gpio/driver.txt
+
+# Código do driver de PCF857
+- id: codePCFDriver
+  type: webpage
+  title: "Driver for pcf857x, pca857x, and pca967x I2C GPIO expanders"
+  author:
+  - family: Brownell
+    given: D.
+  URL: http://lxr.free-electrons.com/source/drivers/gpio/gpio-pcf857x.c
+
+- id: bookExploringBB
+  type: book
+  title: "Exploring BeagleBone: Tools and Techniques for Building with Embedded Linux"
+  author:
+  - family: "Molloy"
+    given: "D."
+  publisher: "John Wiley & Sons"
+  issued: 2014
+  ISBN:	9781118935132
+
+- id: bookELDD
+  type: book
+  title: "Essential Linux Device Drivers"
+  author:
+  - family: "Venkateswaran"
+    given: "S."
+  collection-title: "Prentice Hall open source software development series"
+  publisher: "Prentice Hall"
+  issued: 2008
+  ISBN: 9780132396554
+
+- id: bookLKD
+  type: book
+  title: "Linux Kernel Development"
+  edition: 3
+  author:
+  - family: "Love"
+    given: "R."
+  publisher: "Pearson Education"
+  issued:
+  - year: 2010
+  ISBN: 9780672329463
+
+# O material de referência sobre device-tree. A ser referenciado juntamente com o video do youtube.
+# filename: petazzoni-device-tree-dummies.pdf
+- id: bookDT4Dummies
+  type: article-journal
+  title: "Device Tree for Dummies"
+  author:
+  - family: "Petazzoni"
+    given: "T."
+  container-title: "Embedded Linux Conference"
+  issued: 2014
+  URL: http://free-electrons.com/pub/conferences/2013/elce/petazzoni-device-tree-dummies/
+
+# Especificação do padrão ePAPR. É preciso encontrar um link entre o código do kernel
+# e essa especificação.
+# filename: Power_ePAPR_APPROVED_v1.1.pdf
+- id: specEPAPR
+  type: book
+  title: "Power.org Standard for Embedded Power Architecture Platform Requirements (ePAPR)"
+  edition: 1.1
+  issued: 2011
+
+# Padrão IEEE 1275, especificando a Device Tree
+- id: specIEEE1275
+  type: book
+  title: "IEEE Standard for Boot (Initialization Configuration) Firmware: Core Requirements and Practices"
+  DOI: 10.1109/IEEESTD.1994.89427
+  ISBN: 1-55937-426-8
+  URL: http://ieeexplore.ieee.org/servlet/opac?punumber=6199
+  issued: 1994
+
+# Página da Open Firmware IEEE 1275
+- id: urlOF
+  type: webpage
+  title: "IEEE 1275 Open Firmware Home Page"
+  URL: http://www.firmware.org/1275/home.html
+
+# Página da FirmWorks, a empresa que criou o Open Firmware.
+- id: urlFW
+  type: webpage
+  title: "FirmWorks Home Page"
+  URL: http://www.firmworks.com/
+
+# Página da OpenFirmware, mas é na verdade de um produto chamado OpenBIOS.
+# Está sendo usada como uma informação complementar.
+- id: urlOFWelcome
+  type: webpage
+  title: "OpenBIOS"
+  URL: http://www.openfirmware.info/Welcome_to_OpenBIOS
+
+# Artigo 1/2 do Corbet falando sobre platform devices e DT
+- id: paperCorbetPlatform1
+  type: webpage
+  title: "The platform device API"
+  in: "LWN.net"
+  author:
+  - family: "Corbet"
+    given: "J."
+  URL: https://lwn.net/Articles/448499/
+  issued:
+  - year: 2011
+    month: 6
+
+# Artigo 2/2 do Corbet falando sobre platform devices e DT
+- id: paperCorbetPlatform2
+  type: webpage
+  title: "Platform devices and device trees"
+  in: "LWN.net"
+  author:
+  - family: "Corbet"
+    given: "J."
+  URL: https://lwn.net/Articles/448502/
+  issued:
+  - year: 2011
+    month: 6
+    day: 21
+
+# Documentação do kernel sobre pinctl
+- id: docDevicetreeBindingsPinctl
+  type: webpage
+  title: "One-register-per-pin type device tree based pinctrl driver"
+  URL: https://www.kernel.org/doc/Documentation/devicetree/bindings/pinctrl/pinctrl-single.txt
+
+# Um artigo para ilustrar a introdução da DT na plataforma ARM
+# filename: ols2008v2-pages-27-38.pdf
+- id: paperSymphonyOfFlavors
+  type: article-journal
+  title: "A Symphony of Flavours: Using the device tree to describe embedded hardware"
+  author:
+  - family: "Likely"
+    given: "G."
+  - family: "Boyer"
+    given: "J."
+  container-title: "Proceedings of the Linux Symposium"
+  page: 27-37
+  volume: 2
+  issued: 2008
+
+# Documento da Adafruit sobre introdução da DT na Beaglebone Black
+- id: urlAdafruitIntroduction
+  type: webpage
+  title: "Introduction to the BeagleBone Black device tree"
+  author:
+  - family: Adafruit
+  URL: https://learn.adafruit.com/introduction-to-the-beaglebone-black-device-tree
+
+# Notícia sobre introdução da DT na BBB pela Digikey
+- id: urlDigikeyPR201304
+  type: article-magazine
+  title: "Digi-Key Continues Support of Innovative Line of TI-based ARM Development Boards from BeagleBoard.org"
+  container-title: "Digikey Electronics Press-Releases"
+  issued:
+  - year: 2013
+    month: 4
+    day: 23
+  URL: http://www.digikey.com/en/news/press-releases/2013/apr/digi-key-continues-support-of-innovative-line-of-ti-based-arm-development-boards-from-beagleboardorg
+
+# Página com uma lista abrangente de elementos-padrão na DT
+- id: urlDTUsage
+  type: webpage
+  title: "Device Tree Usage"
+  URL: http://devicetree.org/Device_Tree_Usage
+
+# Slide show da conferência Embedded Linux Conference 2009 mostrando prós e contras do porting da DT para ARM
+# NÃO SEI COMO REFERENCIAR UM PPT DE CONFERENCIA -- PESQUISAR COM CRISHNA #TODO
+# filename: Vwool-device_trees_arm.pdf
+- id: pptVWoolELC09
+  type: article-journal
+  title: "Device Trees for ARM"
+  in: "Embedded Linux Conference 2009"
+  author:
+  - family: "Wool"
+    given: "V."
+  issued:
+  - year: 2009
+
+# Site da OMAPPedia, com informações sobre DT para OMAP (TI)
+# Talvez uma sub-página seja utilizada
+- id: urlOmappedia
+  type: webpage
+  title: "OMAPpedia - Device Tree"
+  URL: http://omappedia.org/wiki/Device_Tree
+
+# Documento do kernel sobre booting
+- id: docArmBooting
+  type: webpage
+  title: "Booting ARM Linux"
+  author:
+  - family: King
+    given: R.
+  URL: https://www.kernel.org/doc/Documentation/arm/Booting
+
+# Documento do kernel explicando o in-kernel overlay
+- id: docDTOverlayNotes
+  type: webpage
+  title: "Device Tree Overlay Notes"
+  URL: https://www.kernel.org/doc/Documentation/devicetree/overlay-notes.txt
+
+# Documento do kernel sobre boot sem Open Firmware, mostrando as alternativas de boot com a DT
+- id: docBootingWithoutOF
+  type: webpage
+  title: "Booting the Linux/ppc kernel without Open Firmware"
+  author:
+  - family: "Herrenschmidt"
+    given: "B."
+  - family: "Bruce"
+    given: "B."
+  - family: "MontaVista Software, Inc"
+  URL: https://www.kernel.org/doc/Documentation/devicetree/booting-without-of.txt
+
+# Manual do Device Tree Compiler
+- id: docDTCManual
+  type: webpage
+  title: "Device Tree Compiler Manual"
+  URL: https://git.kernel.org/cgit/utils/dtc/dtc.git/tree/Documentation/manual.txt
+
+# Mensagem ofensiva do Linus Torvalds rejeitando o código do ARM
+# retirada do documento introduction-to-the-beaglebone-black-device-tree.pdf
+- id: urlEmailLinus
+  type: personal_communication
+  title: "Re: [GIT PULL] omap changes for v2.6.39 merge window"
+  URL: http://article.gmane.org/gmane.linux.ports.arm.omap/55060
+
+# Email de Grant Likely a James Bottom falando sobre a FDT e propondo que se usasse algo assim no ARM
+- id: urlEmailLikely
+  type: webpage
+  title: "Re: Representing Embedded Architectures at the Kernel Summit"
+  author:
+  - family: "Likely"
+    given: "G."
+  URL: http://www.mail-archive.com/linux-embedded@vger.kernel.org/msg01721.html
+
+# Documento do kernel sobre pin controlling
+- id: docPinctrl
+  type: webpage
+  title: "pinctrl (Pin Control) subsystem"
+  URL: https://www.kernel.org/doc/Documentation/pinctrl.txt
+
+# Commit introduzindo o Cape Manager para BBB
+- id: urlCapeManagerCommit
+  type: webpage
+  title: "Introducing a Device Tree overlay cape manager"
+  author:
+  - family: "Antoniou"
+    given: "P."
+  URL: https://lkml.org/lkml/2013/1/7/366
+
+# Repositório de overlays para capes (entre outros)
+- id: urlCapeOverlays
+  type: webpage
+  title: "bb.org-overlays"
+  author:
+  - family: "Nelson"
+    given: "R. C."
+  URL: https://github.com/beagleboard/bb.org-overlays
+
+# Email do Grant Likely com proposta de criação de uma Device Tree Overlay
+- id: urlEmailDTOverlay
+  type: webpage
+  title: "[RFC] Device Tree Overlays Proposal"
+  author:
+  - family: "Likely"
+    given: "G."
+  URL: https://lkml.org/lkml/2012/11/5/615
+
+# Definição do parâmetro CONFIG_PROC_DEVICETREE
+- id: urlLKDDBProcDeviceTree
+  type: webpage
+  title: "CONFIG_PROC_DEVICETREE: Support for device tree in /proc"
+  URL: http://cateee.net/lkddb/web-lkddb/PROC_DEVICETREE.html
+
+# Definição do parâmetro CONFIG_ARM_APPENDED_DTB
+- id: urlLKDDBConfigARMAppendedDTB
+  type: webpage
+  title: "CONFIG_ARM_APPENDED_DTB: Use appended device tree blob to zImage"
+  URL: http://cateee.net/lkddb/web-lkddb/ARM_APPENDED_DTB.html
+
+# Especificação do barramento I2C
+# filename: UM10204.pdf
+- id: specI2C
+  type: book
+  title: "UM10204: I^2C-bus specification and user manual"
+  author:
+  - family: "NXP Semiconductors"
+  edition: 6
+  issued:
+  - year: 2014
+    month: 4
+    day: 4
+  URL: http://www.nxp.com/documents/user_manual/UM10204.pdf
+
+# Paper do David Gibson com uma descrição do blob da FDT: "Format of the device tree blob"
+# filename: dtc-paper.pdf
+- id: paperGibsonDTEverywhere
+  type: article-journal
+  title: "Device trees everywhere"
+  author:
+  - family: "Gibson"
+    given: "D."
+  - family: "Herrenschmidt"
+    given: "B."
+  issued:
+  - year: 2006
+    month: 2
+    day: 13
+  URL: www.ozlabs.org/~dgibson/papers/dtc-paper.pdf
+
+# Device Tree not the answer in the ARM world
+- id: emailLKCL
+  type: webpage
+  title: "Device tree not the answer in the ARM world"
+  author:
+  - family: "Goodenough"
+    given: "D."
+  URL: https://lists.debian.org/debian-arm/2013/05/msg00009.html
+
+# Documentação sobre overlay de DT da Raspbery Pi
+- id: urlRaspberryDT
+  type: webpage
+  title: "Raspberry Pi Documentation - Device trees, overlays and parameters"
+  URL: https://www.raspberrypi.org/documentation/configuration/device-tree.md
+
+# Anuncio do fim do kernel 2.6
+- id: emailEndOfKernel26
+  type: webpage
+  title: "Linux 2.6.32.71 (EOL]"
+  author:
+  - family: "Tarreau"
+    given: "W."
+  URL: http://lkml.iu.edu/hypermail/linux/kernel/1603.1/03938.html
+
+# Device Tree usage model (documentação do kernel)
+- id: docDTUsageModel
+  type: webpage
+  title: "Linux and the Device Tree - The Linux usage model for device tree data"
+  author:
+  - family: "Likely"
+    given: "G."
+  URL: https://www.kernel.org/doc/Documentation/devicetree/usage-model.txt
+
+
+
+
+
+
+
+# Página da wiki elinux atualizada com diversos links úteis para material sobre device tree.
+- id: urlELinuxDTUsefulLinks
+  type: webpage
+  title: "Device Tree presentations papers articles"
+  URL: http://elinux.org/Device_Tree_presentations_papers_articles
+
+# Cape Manager test
+- id: urlTestCapeMgr
+  type: webpage
+  title: "validation-scripts"
+  URL: https://github.com/jadonk/validation-scripts/blob/master/test-capemgr/README.md
+
+# Apresentação do Petazzoni sobre drivers e arquitetura ARM
+# filename: LSM2012_ArmKernelConsolidation_Petazzoni.pdf
+# Libre Software Meeting 2012
+- id: pptARMArchPetazzoni2012
+  type: article-journal
+  title: "Linux kernel: consolidation in the ARM architecture support"
+  author:
+  - family: "Petazzoni"
+    given: "T."
+  container-title: "Libre Software Meeting"
+  issued:
+  - year: 2012
+
+# Documento do google docs, do Pantelis Antoniou
+- id: docBeagleboneAnd38Kernel
+  type: webpage
+  title: "Beaglebone and the 3.8 Kernel"
+  author:
+  - family: "Antoniou"
+    given: "P."
+  - family: "King"
+    given: "T."
+  - family: "Porter"
+    given: "M."
+  URL: https://docs.google.com/document/d/17P54kZkZO_-JtTjrFuVz-Cp_RMMg7GB_8W9JK9sLKfA/pub
+
+# DT Capes do Robert C. Nelson
+# Uma série de arquivos DTS para serem compilados como device tree overlays. Sao overlays de IO da Beaglebone e podem ser usados como exemplo de DT overlay.
+- id: codeNelsonDTCapes
+  type: webpage
+  title: "beaglebone-universal-io"
+  author:
+  - family: "Nelson"
+    given: "R. C."
+  URL: https://github.com/RobertCNelson/beaglebone-universal-io
+
+# Repositório da biblioteca de charLCD da Adafruit
+- id: githubAdafruitCharLCD
+  URL: https://github.com/adafruit/Adafruit_Python_CharLCD
+
+...
